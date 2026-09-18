@@ -1,0 +1,6 @@
+pyTelegramBotAPI
+google-genai
+groq
+openai
+anthropic
+mistralai
