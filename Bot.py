@@ -4,7 +4,8 @@ from google import genai
 from groq import Groq
 from openai import OpenAI
 from anthropic import Anthropic
-from mistralai import Mistral
+from mistralai.client import Mistral
+
 
 # Ambil Token dan API Key secara aman dari Environment Variables server
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
