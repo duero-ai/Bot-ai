@@ -109,4 +109,8 @@ def handle_all_ai(message):
 
 # Jalankan Bot
 print("Bot duero_bot All-In-One Multi-AI berhasil dijalankan!")
+bot.remove_webhook()
 bot.infinity_polling()
+
+
+
