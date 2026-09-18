@@ -1,27 +1,14 @@
 import os
 import telebot
-from google import genai
-from groq import Groq
 from openai import OpenAI
-from anthropic import Anthropic
-from mistralai.client import Mistral
-
 
 # Ambil Token dan API Key secara aman dari Environment Variables server
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
 
 # Inisialisasi Bot & Client AI
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
-gemini_client = genai.Client(api_key=GEMINI_API_KEY)
-groq_client = Groq(api_key=GROQ_API_KEY)
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
-anthropic_client = Anthropic(api_key=ANTHROPIC_API_KEY)
-mistral_client = Mistral(api_key=MISTRAL_API_KEY)
 
 # Handler /start
 @bot.message_handler(commands=['start', 'help'])
